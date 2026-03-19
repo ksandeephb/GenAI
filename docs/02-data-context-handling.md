@@ -224,6 +224,8 @@ Large Document → Chunking → Retrieve Relevant Chunks → Pass to LLM
 
 ## 🧬 8. Embeddings
 
+Youtube Link - https://www.youtube.com/watch?v=wgfSDrqYMJ4 
+
 ### Definition
 Embeddings are vector representations of text used for similarity comparison.
 
