@@ -94,6 +94,8 @@ Documents → Parsing → Chunking → Embeddings → Vector DB → Retrieval �
 
 ## 📄 4. Document Processing (PDFs, Images, Text)
 
+👉 Deep Dive: [Chunking](./deep-dive/document-processing.md)
+
 ### Challenges
 - Scanned vs digital PDFs
 - Complex layouts (tables, multi-column)
