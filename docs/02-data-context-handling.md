@@ -126,6 +126,10 @@ Examples:
 
 ## ✂️ 5. Chunking Strategy (Critical for RAG)
 
+Chunking is used to split large documents into manageable pieces.
+
+👉 Deep Dive: [Chunking](./deep-dive/chunking.md)
+
 ### Why Chunking?
 LLMs have limited context windows → large documents must be split.
 
