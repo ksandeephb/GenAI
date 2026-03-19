@@ -1,0 +1,25 @@
+site_name: GenAI Architect Playbook
+site_description: Vendor-neutral GenAI architecture interview guide
+site_author: Your Name
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Use Case & Problem Framing: 01-use-case-problem-framing.md
+  - Data & Context Handling: 02-data-context-handling.md
+  - LLM Fundamentals: 03-llm-fundamentals.md
+  - Model Selection: 04-model-selection.md
+  - RAG: 05-rag.md
+  - Prompt Engineering: 06-prompt-engineering.md
+  - Agents: 07-agents.md
+  - System Design: 08-system-design.md
+  - Evaluation: 09-evaluation.md
+  - Deployment & Scaling: 10-deployment-scaling.md
+  - Cost Optimization: 11-cost-optimization.md
+  - Security: 12-security.md
+  - Observability: 13-observability.md
+  - Reliability: 14-reliability.md
+  - Integration: 15-integration.md
+  - Advanced Topics: 16-advanced-topics.md
