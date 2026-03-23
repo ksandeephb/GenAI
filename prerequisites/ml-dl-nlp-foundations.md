@@ -1,4 +1,4 @@
-# ⚡ ML, DL & NLP Cheatsheet
+# ⚡ ML, DL & NLP Foundation
 
 [⬅ Back to README](../README.md)
 
