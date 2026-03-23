@@ -291,3 +291,215 @@ AZURE_SEARCH_KEY=xxx
 ## 💡 Key Insight
 
 > Container-based deployment (Azure Container Apps) is the most flexible and scalable approach for GenAI systems.
+
+## 📈 Scaling Strategies (Azure)
+
+### 📌 Why Scaling Matters
+
+GenAI workloads are:
+- Compute-intensive  
+- Variable in demand  
+- Cost-sensitive  
+
+---
+
+### 1. Horizontal Scaling
+
+- Increase number of instances  
+
+---
+
+#### Azure Services
+
+- Azure Container Apps (auto-scale)  
+- Azure App Service (scale-out)  
+
+---
+
+### 2. Auto-scaling
+
+#### Based on:
+- CPU usage  
+- Request rate  
+- Queue length  
+
+---
+
+#### Example
+
+```
+Min replicas: 1  
+Max replicas: 10  
+Scale when CPU > 70%
+```
+
+---
+
+### 3. Asynchronous Processing
+
+- Use queues for heavy workloads  
+
+---
+
+#### Azure Tools
+
+- Azure Service Bus  
+- Azure Queue Storage  
+
+---
+
+## 💰 Cost Optimization (Azure)
+
+### 📌 Cost Drivers
+
+- LLM API usage (Azure OpenAI)  
+- Compute (App Service / Containers)  
+- Storage and retrieval  
+
+---
+
+### Strategies
+
+---
+
+#### 1. Model Optimization
+
+- Use smaller models when possible  
+- Apply model routing  
+
+---
+
+#### 2. Token Optimization
+
+- Reduce prompt size  
+- Limit output tokens  
+
+---
+
+#### 3. Caching
+
+- Cache responses  
+- Cache embeddings  
+
+---
+
+#### 4. Batch Processing
+
+- Combine requests where possible  
+
+---
+
+#### 5. Use Serverless
+
+- Azure Functions for low-traffic workloads  
+
+---
+
+## 📊 Monitoring & Observability (Azure)
+
+### 📌 Tools
+
+---
+
+### 1. Azure Monitor
+
+- Tracks system performance  
+- Collects metrics  
+
+---
+
+### 2. Application Insights
+
+- Request tracking  
+- Dependency tracking  
+- Error monitoring  
+
+---
+
+### What to Monitor
+
+---
+
+#### System Metrics
+
+- Latency  
+- Throughput  
+- Error rate  
+
+---
+
+#### Model Metrics
+
+- Token usage  
+- Cost per request  
+
+---
+
+#### Business Metrics
+
+- User engagement  
+- Success rate  
+
+---
+
+### Logging
+
+- Request/response logs  
+- Errors  
+- Tool usage  
+
+---
+
+## 🔐 Security Best Practices
+
+- Use Azure Key Vault for secrets  
+- Enable authentication (AAD)  
+- Encrypt data at rest and in transit  
+- Restrict API access  
+
+---
+
+## 🏭 Production Checklist
+
+### Before Go-Live
+
+- [ ] API is scalable  
+- [ ] Monitoring enabled  
+- [ ] Logging enabled  
+- [ ] Secrets secured  
+- [ ] Error handling implemented  
+- [ ] Fallback strategy in place  
+
+---
+
+### After Deployment
+
+- [ ] Monitor latency  
+- [ ] Track cost  
+- [ ] Collect user feedback  
+- [ ] Optimize continuously  
+
+---
+
+## ⚖️ Trade-offs
+
+| Factor | Trade-off |
+|-------|----------|
+| Scaling | Cost |
+| Monitoring | Overhead |
+| Security | Complexity |
+| Caching | Data freshness |
+
+---
+
+## 💡 Key Insight
+
+> A successful deployment is not just about running the system — it is about scaling, monitoring, and continuously optimizing it.
+
+---
+
+## 📚 References
+
+- https://learn.microsoft.com/en-us/azure/architecture/  
+- https://learn.microsoft.com/en-us/azure/ai-services/openai/  
+- https://learn.microsoft.com/en-us/azure/monitor/  
