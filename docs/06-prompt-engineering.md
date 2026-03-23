@@ -161,3 +161,183 @@ Extract all biomarkers and return them as structured JSON.
 
 > Better prompts can outperform model upgrades in many cases.
 
+## 🧠 Advanced Prompting Techniques
+
+---
+
+### 1. Chain-of-Thought (CoT) Prompting
+
+#### 📌 Definition
+
+Encourages the model to generate step-by-step reasoning before the final answer.
+
+---
+
+#### Example
+
+```
+Question:
+"If glucose is 180 mg/dL, is it normal?"
+
+Prompt:
+"Think step by step and explain your reasoning before answering."
+```
+
+---
+
+#### Output
+
+```
+Step 1: Normal glucose range is 70–100 mg/dL  
+Step 2: 180 is above the normal range  
+Answer: High
+```
+
+---
+
+#### When to Use
+
+- Complex reasoning tasks  
+- Mathematical or logical problems  
+- Decision-making systems  
+
+---
+
+#### Limitation
+
+- Increases token usage  
+- Slower responses  
+
+---
+
+### 2. Structured Prompting
+
+#### 📌 Definition
+
+Forces the model to return output in a predefined structure.
+
+---
+
+#### Example
+
+```
+Extract biomarker information and return JSON:
+
+{
+  "biomarker": "",
+  "value": "",
+  "unit": "",
+  "status": ""
+}
+```
+
+---
+
+#### Benefits
+
+- Consistent outputs  
+- Easy downstream processing  
+- Reduced ambiguity  
+
+---
+
+### 3. Role Prompting
+
+#### 📌 Definition
+
+Assigns a specific role or persona to the model.
+
+---
+
+#### Example
+
+```
+"You are a senior medical expert specializing in diabetes."
+```
+
+---
+
+#### Benefits
+
+- Improves response quality  
+- Adds domain-specific behavior  
+
+---
+
+### 4. Guardrails in Prompting
+
+#### 📌 Definition
+
+Constraints applied to control model output.
+
+---
+
+#### Example
+
+```
+- Do not provide medical advice beyond general information  
+- Only use provided context  
+- If unsure, say "I don't know"
+```
+
+---
+
+#### Types of Guardrails
+
+- Content restrictions  
+- Output format constraints  
+- Safety rules  
+
+---
+
+## ⚙️ Prompt Templates
+
+Reusable prompt structures for consistency.
+
+---
+
+### Example Template
+
+```
+System:
+"You are an expert in {domain}"
+
+Task:
+{task_description}
+
+Context:
+{retrieved_data}
+
+Instructions:
+{rules}
+
+Output Format:
+{expected_format}
+```
+
+---
+
+## ⚖️ Trade-offs
+
+| Technique | Pros | Cons |
+|----------|------|------|
+| CoT | Better reasoning | Higher cost |
+| Structured | Consistent output | Less flexibility |
+| Role prompting | Better quality | May bias output |
+| Guardrails | Safer output | May restrict creativity |
+
+---
+
+## 🚨 Common Mistakes
+
+- Vague prompts  
+- No output format  
+- Too much context  
+- No guardrails  
+- Overcomplicated instructions  
+
+---
+
+## 💡 Key Insight
+
+> Prompt engineering is about reducing ambiguity and guiding the model toward predictable, reliable outputs.
