@@ -299,3 +299,230 @@ If glucose > 125 → "High"
 
 > Guardrails must assume the model can fail and proactively prevent unsafe or incorrect behavior.
 
+## 🧠 Advanced Guardrails (RAG Systems)
+
+### 📌 Why Special Guardrails for RAG?
+
+RAG systems introduce new risks:
+- Retrieval of incorrect data  
+- Outdated or irrelevant context  
+- Sensitive data exposure  
+
+---
+
+### Techniques
+
+---
+
+#### 1. Context Filtering
+
+- Retrieve only relevant documents  
+- Use metadata filtering  
+
+---
+
+#### 2. Grounded Responses
+
+```
+"Answer only using provided context. If not found, say 'I don't know'."
+```
+
+---
+
+#### 3. Source Attribution
+
+- Include source references  
+- Improve trust and traceability  
+
+---
+
+#### 4. Context Validation
+
+- Ensure retrieved data is relevant  
+- Remove noisy chunks  
+
+---
+
+## 🤖 Guardrails for Agents
+
+### 📌 Challenges
+
+- Autonomous decision-making  
+- Tool misuse  
+- Multi-step errors  
+
+---
+
+### Techniques
+
+---
+
+#### 1. Tool Access Control
+
+- Restrict which tools can be used  
+- Validate tool inputs  
+
+---
+
+#### 2. Step Limits
+
+```
+Max steps = 5
+```
+
+---
+
+#### 3. Action Validation
+
+- Verify tool calls before execution  
+
+---
+
+#### 4. Observation Checks
+
+- Validate tool outputs  
+
+---
+
+## 👤 Human-in-the-Loop (HITL)
+
+### 📌 When to Use
+
+- High-risk domains (healthcare, finance)  
+- Low-confidence outputs  
+- Critical decisions  
+
+---
+
+### Workflow
+
+```
+LLM Output → Human Review → Final Decision
+```
+
+---
+
+### Benefits
+
+- Improves accuracy  
+- Reduces risk  
+- Builds trust  
+
+---
+
+## 🏛️ Governance & Compliance
+
+### 📌 Why It Matters
+
+Enterprises require:
+- Regulatory compliance  
+- Data protection  
+- Auditability  
+
+---
+
+### Key Practices
+
+---
+
+#### 1. Data Governance
+
+- Control data access  
+- Track data usage  
+
+---
+
+#### 2. Audit Logging
+
+- Log all interactions  
+- Track decisions  
+
+---
+
+#### 3. Policy Enforcement
+
+- Define usage policies  
+- Enforce restrictions  
+
+---
+
+#### 4. Responsible AI
+
+- Bias mitigation  
+- Transparency  
+- Fairness  
+
+---
+
+📚 Reference
+
+- https://learn.microsoft.com/en-us/azure/ai-services/responsible-use-of-ai-overview  
+
+---
+
+## 🏭 Production Guardrail Patterns
+
+---
+
+### 1. Multi-layer Guardrails
+
+```
+Input → Validation → Retrieval → LLM → Output Validation → Response
+```
+
+---
+
+### 2. Defense-in-Depth
+
+- Multiple layers of protection  
+- Do not rely on a single mechanism  
+
+---
+
+### 3. Feedback Loop
+
+- Capture failures  
+- Improve system continuously  
+
+---
+
+## ⚖️ Trade-offs
+
+| Factor | Trade-off |
+|-------|----------|
+| Safety | Flexibility |
+| Validation | Latency |
+| Human review | Cost |
+| Strict rules | Creativity |
+
+---
+
+## 🚨 Common Mistakes
+
+- Applying guardrails only at output  
+- No human fallback  
+- Ignoring compliance requirements  
+- Over-trusting LLM  
+
+---
+
+## 🧠 Design Principles
+
+- Assume failure  
+- Validate at every step  
+- Layer protections  
+- Monitor continuously  
+
+---
+
+## 💡 Key Insight
+
+> Guardrails are not a single component — they are a system-wide design philosophy ensuring safety, reliability, and compliance.
+
+---
+
+## 📚 References
+
+- https://learn.microsoft.com/en-us/azure/ai-services/  
+- https://platform.openai.com/docs  
+- https://github.com/NVIDIA/NeMo-Guardrails  
