@@ -19,66 +19,66 @@ A comprehensive, production-ready guide to designing, building, and scaling Gene
 
 ### 🧩 Core Foundations
 
-* [Use Case & Problem Framing](01-use-case-problem-framing.md)
-* [Data & Context Handling](02-data-context-handling.md)
-* [LLM Fundamentals](03-llm-fundamentals.md)
-* [Model Selection](04-model-selection.md)
+* [Use Case & Problem Framing](docs/01-use-case-problem-framing.md)
+* [Data & Context Handling](docs/02-data-context-handling.md)
+* [LLM Fundamentals](docs/03-llm-fundamentals.md)
+* [Model Selection](docs/04-model-selection.md)
 
 ---
 
 ### 🔍 Retrieval & Prompting
 
-* [RAG (Retrieval-Augmented Generation)](05-rag.md)
-* [Prompt Engineering](06-prompt-engineering.md)
-* [Long Context Handling](18-long-context-handling.md)
+* [RAG (Retrieval-Augmented Generation)](docs/05-rag.md)
+* [Prompt Engineering](docs/06-prompt-engineering.md)
+* [Long Context Handling](docs/18-long-context-handling.md)
 
 ---
 
 ### 🤖 Advanced Systems
 
-* [Agents](07-agents.md)
-* [Multi-Agent Systems & MCP](19-multi-agent-mcp.md)
-* [Multimodal Systems](17-multimodal-systems.md)
+* [Agents](docs/07-agents.md)
+* [Multi-Agent Systems & MCP](docs/19-multi-agent-mcp.md)
+* [Multimodal Systems](docs/17-multimodal-systems.md)
 
 ---
 
 ### 🏗️ Production System Design
 
-* [System Design](08-system-design.md)
-* [Deployment (Azure)](10-deployment.md)
-* [Observability](12-observability.md)
-* [Guardrails & Security](11-guardrails.md)
+* [System Design](docs/08-system-design.md)
+* [Deployment (Azure)](docs/10-deployment.md)
+* [Observability](docs/12-observability.md)
+* [Guardrails & Security](docs/11-guardrails.md)
 
 ---
 
 ### 📊 Optimization & Evaluation
 
-* [Evaluation](09-evaluation.md)
-* [Cost Optimization](13-cost-optimization.md)
-* [Performance Tuning](14-performance-tuning.md)
+* [Evaluation](docs/09-evaluation.md)
+* [Cost Optimization](docs/13-cost-optimization.md)
+* [Performance Tuning](docs/14-performance-tuning.md)
 
 ---
 
 ### 🔬 Advanced LLM Techniques
 
-* [Fine-Tuning](15-fine-tuning.md)
-* [Quantization](16-quantization.md)
+* [Fine-Tuning](docs/15-fine-tuning.md)
+* [Quantization](docs/16-quantization.md)
 
 ---
 
 ## 🧭 Diagrams
 
-* [System Architecture](diagrams/system-architecture.png)
-* [RAG Flow](diagrams/rag-flow.png)
-* [Agent Architecture](diagrams/agent-architecture.png)
-* [Multimodal Pipeline](diagrams/multimodal-pipeline.png)
-* [Azure Deployment](diagrams/deployment-azure.png)
+* [System Architecture](docs/diagrams/system-architecture.png)
+* [RAG Flow](docs/diagrams/rag-flow.png)
+* [Agent Architecture](docs/diagrams/agent-architecture.png)
+* [Multimodal Pipeline](docs/diagrams/multimodal-pipeline.png)
+* [Azure Deployment](docs/diagrams/deployment-azure.png)
 
 ---
 
 ## 🚀 How to Use
 
-1. Start with [Use Case & Problem Framing](01-use-case-problem-framing.md)
+1. Start with [Use Case & Problem Framing](docs/01-use-case-problem-framing.md)
 2. Follow the sequence
 3. Explore examples
 
