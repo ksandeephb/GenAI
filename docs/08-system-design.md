@@ -123,3 +123,182 @@ User Query
 ## 💡 Key Insight
 
 > A GenAI system is not just an LLM — it is a combination of multiple components working together.
+
+## 📈 Scalability
+
+### 📌 Definition
+
+Scalability is the ability of the system to handle increasing load.
+
+---
+
+### Strategies
+
+#### 1. Horizontal Scaling
+
+- Add more instances  
+- Use load balancers  
+
+---
+
+#### 2. Stateless APIs
+
+- No session dependency  
+- Easier to scale  
+
+---
+
+#### 3. Distributed Systems
+
+- Separate services:
+  - Retrieval  
+  - LLM  
+  - Processing  
+
+---
+
+#### 4. Asynchronous Processing
+
+- Queue-based systems (Kafka, Pub/Sub)  
+- Background jobs  
+
+---
+
+## ⚡ Latency Optimization
+
+### 📌 Why It Matters
+
+- User experience  
+- Real-time applications  
+
+---
+
+### Techniques
+
+#### 1. Reduce Token Usage
+
+- Smaller prompts  
+- Efficient context  
+
+---
+
+#### 2. Use Smaller Models
+
+- For simple tasks  
+
+---
+
+#### 3. Parallel Processing
+
+- Run retrieval and preprocessing in parallel  
+
+---
+
+#### 4. Streaming Responses
+
+- Return partial outputs  
+
+---
+
+#### 5. Caching
+
+- Avoid repeated computation  
+
+---
+
+## 💰 Cost Optimization
+
+### 📌 Cost Drivers
+
+- Token usage  
+- Model size  
+- API calls  
+- Retrieval operations  
+
+---
+
+### Strategies
+
+#### 1. Model Routing
+
+- Use smaller models when possible  
+
+---
+
+#### 2. Token Optimization
+
+- Limit input size  
+- Reduce output length  
+
+---
+
+#### 3. Caching Responses
+
+- Reuse previous outputs  
+
+---
+
+#### 4. Batch Processing
+
+- Combine requests  
+
+---
+
+#### 5. Use Open-source Models
+
+- For high-volume workloads  
+
+---
+
+## 🧠 Caching Strategies
+
+---
+
+### 1. Response Caching
+
+```
+Query → Cache → Response
+```
+
+---
+
+### 2. Embedding Caching
+
+- Avoid recomputing embeddings  
+
+---
+
+### 3. Retrieval Caching
+
+- Cache top-K results  
+
+---
+
+### 4. Prompt Caching
+
+- Reuse prompt templates  
+
+---
+
+### Tools
+
+- Redis  
+- In-memory cache  
+- CDN  
+
+---
+
+## ⚖️ Trade-offs
+
+| Factor | Trade-off |
+|-------|----------|
+| Speed | Cost |
+| Accuracy | Latency |
+| Caching | Freshness |
+| Scaling | Complexity |
+
+---
+
+## 💡 Key Insight
+
+> Production systems are optimized not just for accuracy, but for scalability, latency, and cost.
