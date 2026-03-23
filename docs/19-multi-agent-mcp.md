@@ -283,3 +283,213 @@ Agent A → Refine
 ## 💡 Key Insight
 
 > Multi-agent systems improve performance by specialization, but increase complexity — use them only when necessary.
+
+## 🔌 Model Context Protocol (MCP)
+
+---
+
+### 📌 What is MCP?
+
+Model Context Protocol (MCP) is a standardized way for:
+
+- LLMs  
+- Tools  
+- External systems  
+
+to communicate with each other.
+
+---
+
+### 🧠 Why MCP is Needed
+
+Without MCP:
+
+- Each tool has custom integration  
+- Hard to scale  
+- Poor interoperability  
+
+---
+
+With MCP:
+
+- Standard interface  
+- Plug-and-play tools  
+- Easier multi-agent coordination  
+
+---
+
+## ⚙️ MCP Architecture
+
+```
+LLM / Agent
+   ↓
+MCP Layer
+   ↓
+Tools (APIs, DBs, Services)
+```
+
+---
+
+## 🧩 Core Concepts
+
+---
+
+### 1. Tool Definition
+
+Each tool exposes:
+
+- Name  
+- Input schema  
+- Output schema  
+
+---
+
+### Example
+
+```json
+{
+  "name": "get_lab_report",
+  "input": {"user_id": "string"},
+  "output": {"report": "text"}
+}
+```
+
+---
+
+---
+
+### 2. Standardized Communication
+
+- Agents call tools via structured requests  
+- Tools return structured responses  
+
+---
+
+---
+
+### 3. Context Sharing
+
+- Agents share state/context via MCP  
+
+---
+
+## 🧪 Example (Simplified Tool Call)
+
+```python
+tool = {
+    "name": "get_lab_report",
+    "function": lambda user_id: "Glucose: 180 mg/dL"
+}
+
+def agent(query):
+    if "report" in query:
+        return tool["function"]("user123")
+
+print(agent("Get my report"))
+```
+
+---
+
+## 🔗 MCP vs Traditional APIs
+
+| Aspect | Traditional | MCP |
+|-------|------------|-----|
+| Integration | Custom | Standardized |
+| Scalability | Hard | Easy |
+| Flexibility | Low | High |
+
+---
+
+## 🏭 Real-world Architecture
+
+```
+User
+  ↓
+Agent System
+  ↓
+MCP Layer
+  ↓
+Tools:
+  - Database
+  - APIs
+  - Retrieval system
+  - External services
+  ↓
+Response
+```
+
+---
+
+## 🔁 MCP + Multi-Agent
+
+```
+Planner Agent
+   ↓
+Executor Agents
+   ↓
+MCP Layer
+   ↓
+Tools
+```
+
+---
+
+## 🎯 Interview-Level Insights
+
+---
+
+### Key Point 1
+
+> MCP standardizes tool interaction, making multi-agent systems scalable.
+
+---
+
+### Key Point 2
+
+> It decouples agents from tools.
+
+---
+
+### Key Point 3
+
+> Essential for enterprise-grade agent systems.
+
+---
+
+## ⚖️ Trade-offs
+
+| Factor | Trade-off |
+|-------|----------|
+| Standardization | Less flexibility |
+| Abstraction | Added complexity |
+
+---
+
+## 🚨 Common Mistakes
+
+- Tight coupling between agent and tools  
+- No standard schema  
+- No validation of tool responses  
+
+---
+
+## 🧠 Design Principles
+
+- Standardize interfaces  
+- Decouple components  
+- Validate all interactions  
+- Log tool usage  
+
+---
+
+## 💡 Key Insight
+
+> MCP is the foundation for scalable, modular, and interoperable multi-agent systems.
+
+---
+
+## 📚 References
+
+- https://modelcontextprotocol.io/  
+- https://python.langchain.com/docs/  
+- https://learn.microsoft.com/en-us/azure/  
