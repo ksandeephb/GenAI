@@ -123,3 +123,172 @@ Examples:
 
 > Start with closed models for speed, then evaluate open-source for cost and control at scale.
 
+## 🎯 Model Selection Criteria
+
+Choosing a model requires evaluating multiple dimensions.
+
+---
+
+### 1. Accuracy
+
+#### 📌 Definition
+How well the model performs on the task.
+
+---
+
+#### Considerations
+
+- Domain performance (medical, legal, general)  
+- Reasoning capability  
+- Hallucination tendency  
+
+---
+
+#### Evaluation Methods
+
+- Benchmark datasets  
+- Human evaluation  
+- Task-specific testing  
+
+---
+
+## ⚡ 2. Latency
+
+### 📌 Definition
+Time taken to generate a response.
+
+---
+
+### Factors Affecting Latency
+
+- Model size  
+- Input/output token length  
+- Infrastructure (API vs self-hosted)  
+
+---
+
+### Trade-off
+
+| Low Latency | High Latency |
+|------------|-------------|
+| Faster responses | Better reasoning |
+| Smaller models | Larger models |
+
+---
+
+## 💰 3. Cost
+
+### 📌 Definition
+Cost per request or per token usage.
+
+---
+
+### Cost Factors
+
+- Input tokens  
+- Output tokens  
+- Model pricing tier  
+
+---
+
+### Example
+
+```
+Cost = (Input Tokens + Output Tokens) × Price per Token
+```
+
+---
+
+### Optimization Strategies
+
+- Reduce token usage  
+- Use smaller models  
+- Cache responses  
+- Use model routing  
+
+---
+
+## 📏 4. Context Window
+
+### 📌 Definition
+Maximum number of tokens a model can process.
+
+---
+
+### Importance
+
+- Larger context → more information  
+- Smaller context → faster and cheaper  
+
+---
+
+### Example
+
+| Context Size | Use Case |
+|-------------|---------|
+| 4K | Short queries |
+| 32K | Documents |
+| 100K+ | Large context (RAG) |
+
+---
+
+## 🧪 Benchmarking Strategy
+
+### 📌 Why Benchmark?
+
+To compare models objectively.
+
+---
+
+### Steps
+
+1. Define task  
+2. Create evaluation dataset  
+3. Run multiple models  
+4. Measure metrics:
+   - Accuracy  
+   - Latency  
+   - Cost  
+5. Compare results  
+
+---
+
+### Example
+
+```
+Task: Extract biomarkers
+
+Model A:
+Accuracy: 85%
+Latency: 500ms
+Cost: Low
+
+Model B:
+Accuracy: 92%
+Latency: 1200ms
+Cost: High
+```
+
+---
+
+### Decision
+
+- High accuracy required → Model B  
+- Cost-sensitive → Model A  
+
+---
+
+## ⚖️ Trade-offs
+
+| Factor | Trade-off |
+|-------|----------|
+| Accuracy vs Cost | Higher accuracy → higher cost |
+| Latency vs Quality | Faster → less reasoning |
+| Context vs Cost | Larger context → more tokens |
+
+---
+
+## 💡 Key Insight
+
+> Model selection is a multi-dimensional optimization problem involving accuracy, latency, cost, and context.
+
