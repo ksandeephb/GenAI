@@ -1,4 +1,4 @@
-# 🚀 GenAI Architect Playbook
+# 🚀 AI Playbook
 
 A comprehensive, production-ready guide to designing, building, and scaling Generative AI systems.
 
