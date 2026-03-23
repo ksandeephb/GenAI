@@ -279,7 +279,222 @@ Assistant:
 
 ---
 
+## 💡 Key Insight## 🎲 Sampling in LLMs
+
+### 📌 Why Sampling Matters
+
+LLMs generate text probabilistically by selecting the next token from a distribution of possible tokens.
+
+Sampling controls:
+- Creativity
+- Diversity
+- Determinism
+
+---
+
+## 🌡️ Temperature
+
+### 📌 Definition
+
+Temperature controls randomness in output.
+
+---
+
+### Behavior
+
+| Temperature | Effect |
+|------------|-------|
+| 0.0 | Deterministic (same output every time) |
+| 0.3–0.5 | Focused and factual |
+| 0.7–1.0 | Creative and diverse |
+| >1.0 | Very random (often incoherent) |
+
+---
+
+### Example
+
+```
+Prompt: "The glucose level is"
+
+Temperature = 0.2 → "high"
+Temperature = 0.9 → "elevated / abnormal / dangerously high"
+```
+
+---
+
+## 🔢 Top-K Sampling
+
+### 📌 Definition
+
+Top-K sampling restricts the model to choose from the top K most probable tokens.
+
+---
+
+### Example
+
+```
+Top-K = 3
+
+Possible tokens:
+1. high (0.4)
+2. normal (0.3)
+3. elevated (0.2)
+4. random (0.1)
+
+Model selects from top 3 only
+```
+
+---
+
+### Effect
+
+- Reduces unlikely outputs  
+- Improves coherence  
+
+---
+
+## 🎯 Top-P (Nucleus Sampling)
+
+### 📌 Definition
+
+Top-P selects tokens whose cumulative probability ≥ P.
+
+---
+
+### Example
+
+```
+Top-P = 0.9
+
+Tokens:
+high (0.4)
+normal (0.3)
+elevated (0.2)
+random (0.1)
+
+Selected until cumulative ≥ 0.9 → first 3 tokens
+```
+
+---
+
+### Effect
+
+- More adaptive than Top-K  
+- Balances diversity and quality  
+
+---
+
+## ⚖️ Determinism vs Randomness
+
+### Deterministic Output
+
+- Temperature = 0  
+- Same input → same output  
+- Best for:
+  - Extraction
+  - Classification
+  - Structured outputs  
+
+---
+
+### Random Output
+
+- Higher temperature  
+- Different outputs each time  
+- Best for:
+  - Content generation
+  - Creative writing  
+
+---
+
+## 🧠 Hallucination in LLMs
+
+### 📌 Definition
+
+Hallucination is when an LLM generates:
+- Incorrect  
+- Fabricated  
+- Unsupported information  
+
+---
+
+### Why Hallucination Happens
+
+1. Training limitations  
+2. Lack of grounding  
+3. Over-generalization  
+4. Probabilistic nature  
+
+---
+
+### Example
+
+```
+Prompt:
+"What is the normal glucose level?"
+
+Output:
+"Normal glucose is 50 mg/dL" ❌ (Incorrect)
+```
+
+---
+
+## 🚨 Types of Hallucination
+
+### 1. Factual Errors
+- Incorrect information  
+
+---
+
+### 2. Fabricated Data
+- Made-up references or numbers  
+
+---
+
+### 3. Logical Errors
+- Incorrect reasoning  
+
+---
+
+## 🛠️ Mitigation Strategies
+
+- Use RAG (grounding)  
+- Provide clear prompts  
+- Reduce temperature  
+- Add validation layers  
+- Use structured outputs  
+
+---
+
+## ⚙️ Real-world Implications
+
+### 1. Extraction Systems
+- Use low temperature (0–0.3)  
+- Ensure deterministic output  
+
+---
+
+### 2. Chatbots
+- Balance temperature (0.5–0.7)  
+
+---
+
+### 3. Creative Applications
+- Use higher temperature (0.7–1.0)  
+
+---
+
 ## 💡 Key Insight
+
+> LLMs are probabilistic systems. Sampling controls behavior, and hallucination is an inherent limitation that must be mitigated through system design.
+
+---
+
+## 📚 References
+
+- https://platform.openai.com/docs/guides/text-generation  
+- https://www.promptingguide.ai/  
+- https://arxiv.org/abs/1706.03762  
 
 > Attention enables understanding of relationships, context window limits memory, and prompts control behavior.
 
