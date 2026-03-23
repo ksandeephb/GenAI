@@ -341,3 +341,208 @@ Output Format:
 ## 💡 Key Insight
 
 > Prompt engineering is about reducing ambiguity and guiding the model toward predictable, reliable outputs.
+
+## ⚙️ Prompt Optimization
+
+### 📌 Goal
+
+Improve prompt performance in terms of:
+- Accuracy  
+- Consistency  
+- Cost  
+- Latency  
+
+---
+
+### Techniques
+
+#### 1. Simplification
+
+- Remove unnecessary instructions  
+- Keep prompts concise  
+
+---
+
+#### 2. Explicit Instructions
+
+- Clearly define task  
+- Specify constraints  
+
+---
+
+#### Example
+
+```
+Bad:
+"Analyze this report"
+
+Good:
+"Extract all biomarkers and return structured JSON"
+```
+
+---
+
+#### 3. Output Constraints
+
+- Force format (JSON, list, table)  
+- Reduce variability  
+
+---
+
+#### 4. Context Optimization
+
+- Provide only relevant information  
+- Avoid overloading context window  
+
+---
+
+#### 5. Iterative Refinement
+
+- Test → Analyze → Improve  
+
+---
+
+## 📏 Prompt Evaluation
+
+### 📌 Why Evaluate Prompts?
+
+- Ensure consistent performance  
+- Detect failures  
+- Improve reliability  
+
+---
+
+### Methods
+
+#### 1. Manual Evaluation
+
+- Human review of outputs  
+
+---
+
+#### 2. Automated Evaluation
+
+- Use metrics:
+  - Accuracy  
+  - Format correctness  
+  - Consistency  
+
+---
+
+#### 3. LLM-as-a-Judge
+
+- Use another LLM to evaluate outputs  
+
+---
+
+### Example
+
+```
+Prompt A → Accuracy: 80%  
+Prompt B → Accuracy: 90%  
+
+Choose Prompt B
+```
+
+---
+
+## 🔄 Prompt Versioning
+
+### 📌 Why Version Prompts?
+
+Prompts evolve over time:
+- Improvements  
+- Bug fixes  
+- Optimization  
+
+---
+
+### Best Practices
+
+- Maintain versions (v1, v2, v3)  
+- Track changes  
+- Compare performance  
+
+---
+
+### Example
+
+```
+v1: Basic extraction  
+v2: Added JSON format  
+v3: Added validation rules  
+```
+
+---
+
+## 🧱 Real-world Patterns (RAG + Prompting)
+
+### Pattern 1: Context Injection
+
+```
+Context:
+{retrieved_chunks}
+
+Question:
+{user_query}
+```
+
+---
+
+### Pattern 2: Grounded Responses
+
+```
+Use only the provided context.
+If the answer is not present, say "I don't know."
+```
+
+---
+
+### Pattern 3: Structured Output
+
+```
+Return response in JSON format
+```
+
+---
+
+### Pattern 4: Multi-step Prompting
+
+```
+Step 1: Extract data  
+Step 2: Analyze  
+Step 3: Generate answer  
+```
+
+---
+
+## ⚖️ Trade-offs
+
+| Factor | Trade-off |
+|-------|----------|
+| More context | Better answers vs higher cost |
+| Strict format | Consistency vs flexibility |
+| Detailed prompts | Accuracy vs latency |
+
+---
+
+## 🚨 Common Mistakes
+
+- No prompt evaluation  
+- No versioning  
+- Overloading context  
+- Ignoring cost impact  
+- Not handling edge cases  
+
+---
+
+## 💡 Key Insight
+
+> Prompt engineering is not a one-time task — it is an iterative process of design, evaluation, and optimization.
+
+---
+
+## 📚 References
+
+- https://www.promptingguide.ai/  
+- https://platform.openai.com/docs/guides/prompt-engineering  
