@@ -75,6 +75,10 @@ Each word looks at other words to understand context.
 
 :contentReference[oaicite:0]{index=0}
 
+
+<img width="940" height="446" alt="image" src="https://github.com/user-attachments/assets/b243a31e-982f-4093-b2c0-34784cbfb51a" />
+
+
 ---
 
 ### Components
