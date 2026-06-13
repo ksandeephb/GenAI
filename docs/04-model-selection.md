@@ -1,5 +1,15 @@
 # ⚖️ Model Selection Strategy
 
+Links
+LLM selection 
+https://vellum.ai/llm-leaderboard
+https://artificialanalysis.ai/
+https://labs.scale.com/leaderboard
+https://labs.scale.com/leaderboard/humanitys_last_exam
+https://livebench.ai/#/?highunseenbias=true
+https://arena.ai/
+
+
 ## 📌 Overview
 
 Model selection is a critical step in designing Generative AI systems. The choice of model impacts:
