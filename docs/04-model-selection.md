@@ -2,12 +2,12 @@
 
 Links
 LLM selection 
-https://vellum.ai/llm-leaderboard
-https://artificialanalysis.ai/
-https://labs.scale.com/leaderboard
-https://labs.scale.com/leaderboard/humanitys_last_exam
-https://livebench.ai/#/?highunseenbias=true
-https://arena.ai/
+- https://vellum.ai/llm-leaderboard
+- https://artificialanalysis.ai/
+- https://labs.scale.com/leaderboard
+- https://labs.scale.com/leaderboard/humanitys_last_exam
+- https://livebench.ai/#/?highunseenbias=true
+- https://arena.ai/
 
 
 ## 📌 Overview
